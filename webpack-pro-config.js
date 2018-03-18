@@ -7,11 +7,11 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './src/vu.js'
+        index: './src/autoViewPort.js'
     },
     output: {
         path: __dirname + '/dist',
-        filename: 'vu.min.js'
+        filename: 'autoViewPort.min.js'
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
@@ -19,7 +19,7 @@ module.exports = {
                 warnings: false
             },
             mangle: {
-                except: ['$Vu', 'module', 'exports']
+                except: ['autoViewPort', 'module', 'exports']
             }
         })
     ],
